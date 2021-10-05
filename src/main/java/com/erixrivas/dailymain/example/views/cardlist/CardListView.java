@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.views.cardlist;
+package com.erixrivas.dailymain.example.views.cardlist;
 
 import java.util.Arrays;
 import java.util.List;

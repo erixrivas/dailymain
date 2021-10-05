@@ -32,14 +32,14 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
 import com.erixrivas.dailymain.views.MainLayout;
-import com.erixrivas.dailymain.views.helloworld.HelloWorldView;
-import com.erixrivas.dailymain.views.about.AboutView;
-import com.erixrivas.dailymain.views.map.MapView;
-import com.erixrivas.dailymain.views.cardlist.CardListView;
-import com.erixrivas.dailymain.views.masterdetail.MasterDetailView;
-import com.erixrivas.dailymain.views.personform.PersonFormView;
-import com.erixrivas.dailymain.views.imagelist.ImageListView;
-import com.erixrivas.dailymain.views.checkoutform.CheckoutFormView;
+import com.erixrivas.dailymain.example.views.about.AboutView;
+import com.erixrivas.dailymain.example.views.cardlist.CardListView;
+import com.erixrivas.dailymain.example.views.checkoutform.CheckoutFormView;
+import com.erixrivas.dailymain.example.views.helloworld.HelloWorldView;
+import com.erixrivas.dailymain.example.views.imagelist.ImageListView;
+import com.erixrivas.dailymain.example.views.map.MapView;
+import com.erixrivas.dailymain.example.views.masterdetail.MasterDetailView;
+import com.erixrivas.dailymain.example.views.personform.PersonFormView;
 import com.vaadin.flow.component.avatar.Avatar;
 
 /**

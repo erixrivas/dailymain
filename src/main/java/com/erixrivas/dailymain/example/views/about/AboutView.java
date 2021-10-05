@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.views.about;
+package com.erixrivas.dailymain.example.views.about;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;

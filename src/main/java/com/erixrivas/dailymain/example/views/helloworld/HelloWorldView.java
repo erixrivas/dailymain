@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.views.helloworld;
+package com.erixrivas.dailymain.example.views.helloworld;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;

@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.data;
+package com.erixrivas.dailymain.example.data;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

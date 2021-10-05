@@ -1,7 +1,7 @@
-package com.erixrivas.dailymain.views.personform;
+package com.erixrivas.dailymain.example.views.personform;
 
-import com.erixrivas.dailymain.data.entity.SamplePerson;
-import com.erixrivas.dailymain.data.service.SamplePersonService;
+import com.erixrivas.dailymain.example.data.entity.SamplePerson;
+import com.erixrivas.dailymain.example.data.service.SamplePersonService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;

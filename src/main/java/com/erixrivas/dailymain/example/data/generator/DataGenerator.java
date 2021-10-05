@@ -1,9 +1,8 @@
-package com.erixrivas.dailymain.data.generator;
+package com.erixrivas.dailymain.example.data.generator;
 
 import com.vaadin.flow.spring.annotation.SpringComponent;
-
-import com.erixrivas.dailymain.data.service.SamplePersonRepository;
-import com.erixrivas.dailymain.data.entity.SamplePerson;
+import com.erixrivas.dailymain.example.data.entity.SamplePerson;
+import com.erixrivas.dailymain.example.data.service.SamplePersonRepository;
 
 import java.time.LocalDateTime;
 

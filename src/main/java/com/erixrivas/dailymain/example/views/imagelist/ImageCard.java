@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.views.imagelist;
+package com.erixrivas.dailymain.example.views.imagelist;
 
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;

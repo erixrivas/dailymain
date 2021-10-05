@@ -1,10 +1,9 @@
-package com.erixrivas.dailymain.views.masterdetail;
+package com.erixrivas.dailymain.example.views.masterdetail;
 
 import java.util.Optional;
 
-import com.erixrivas.dailymain.data.entity.SamplePerson;
-import com.erixrivas.dailymain.data.service.SamplePersonService;
-
+import com.erixrivas.dailymain.example.data.entity.SamplePerson;
+import com.erixrivas.dailymain.example.data.service.SamplePersonService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.UI;

@@ -1,9 +1,9 @@
-package com.erixrivas.dailymain.views.map;
+package com.erixrivas.dailymain.example.views.map;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.erixrivas.dailymain.components.leafletmap.LeafletMap;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.PageTitle;
+import com.erixrivas.dailymain.example.components.leafletmap.LeafletMap;
 import com.erixrivas.dailymain.views.MainLayout;
 
 @PageTitle("Map")

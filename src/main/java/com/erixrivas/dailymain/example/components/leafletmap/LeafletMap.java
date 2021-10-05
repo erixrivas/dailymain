@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.components.leafletmap;
+package com.erixrivas.dailymain.example.components.leafletmap;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasSize;

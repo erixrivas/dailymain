@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.views.cardlist;
+package com.erixrivas.dailymain.example.views.cardlist;
 
 public class Person {
 

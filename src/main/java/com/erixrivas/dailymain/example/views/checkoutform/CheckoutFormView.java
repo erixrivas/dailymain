@@ -1,4 +1,4 @@
-package com.erixrivas.dailymain.views.checkoutform;
+package com.erixrivas.dailymain.example.views.checkoutform;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,9 @@
-package com.erixrivas.dailymain.data.entity;
+package com.erixrivas.dailymain.example.data.entity;
 
 import javax.persistence.Entity;
 
-import com.erixrivas.dailymain.data.AbstractEntity;
+import com.erixrivas.dailymain.example.data.AbstractEntity;
+
 import java.time.LocalDate;
 
 @Entity

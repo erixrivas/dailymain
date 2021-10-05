@@ -1,10 +1,11 @@
-package com.erixrivas.dailymain.data.service;
-
-import com.erixrivas.dailymain.data.entity.SamplePerson;
+package com.erixrivas.dailymain.example.data.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.vaadin.artur.helpers.CrudService;
+
+import com.erixrivas.dailymain.example.data.entity.SamplePerson;
+
 import java.time.LocalDate;
 
 @Service
