@@ -1,9 +1,16 @@
 package com.erixrivas.dailymain.views;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import com.erixrivas.dailymain.domain.entyties.Marca;
+import com.erixrivas.dailymain.views.component.CustomDownLoadButton;
+import com.opencsv.bean.StatefulBeanToCsv;
+import com.opencsv.bean.StatefulBeanToCsvBuilder;
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.formlayout.FormLayout;
@@ -14,6 +21,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.provider.ListDataProvider;
+import com.vaadin.flow.data.provider.Query;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -24,6 +32,7 @@ public class CatalogoMarca extends VerticalLayout {
 	private Button btnAgregarMarca= new Button("Agregar Marca", VaadinIcon.PLUS.create());
 	private Button btnEditarMarca= new Button("Agregar Marca", VaadinIcon.EDIT.create());
 	private Button btnAnularMarca= new Button("Agregar Marca", VaadinIcon.TRASH.create());
+	private CustomDownLoadButton btnDescargar= new CustomDownLoadButton("Descargar Csv");
 	
 	private Grid<Marca> grilla = new Grid<Marca>();
 	
@@ -32,7 +41,7 @@ public class CatalogoMarca extends VerticalLayout {
 
 	public CatalogoMarca() {
 		super();
-		barraDeBotones.add(btnAgregarMarca,btnEditarMarca,btnAnularMarca );
+		barraDeBotones.add(btnAgregarMarca,btnEditarMarca,btnAnularMarca,btnDescargar );
 		
 		grilla.addColumn(Marca::getDescripcion).setHeader("Descripcion");
 		grilla.addColumn(Marca::getAlias).setHeader("Marca");
@@ -51,6 +60,17 @@ public class CatalogoMarca extends VerticalLayout {
 		} );
 		txtFiltroDescripcion.addValueChangeListener(e->filtrarCatalogo(e));
 		txtFiltroAlias.addValueChangeListener(e->filtrarCatalogo(e));
+		
+		 btnDescargar.getButton().addClickListener(e->{
+				
+				try {
+					this.imprimirYDescargar(btnDescargar,grilla,"MARCAS");
+				} catch (CsvDataTypeMismatchException | CsvRequiredFieldEmptyException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			} 
+		);
 		
 		add(barraDeBotones,new FormLayout(txtFiltroDescripcion,txtFiltroAlias),grilla);
 		
@@ -82,4 +102,16 @@ public class CatalogoMarca extends VerticalLayout {
 		// return where.toLowerCase().contains(what.toLowerCase());
 	}
 
+
+private void imprimirYDescargar(CustomDownLoadButton boton, Grid<Marca> grilla,String nombre) throws CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
+
+	
+	Stream<Marca> auxiliarDetalleMovimientos =grilla.getDataProvider().fetch(new Query<>());
+	StringWriter output = new  StringWriter();
+	 StatefulBeanToCsv<Marca> beantocsv = new StatefulBeanToCsvBuilder<Marca>(output).build();
+	 beantocsv.write(auxiliarDetalleMovimientos);
+	 String content=output.toString();
+	boton.setAnchor(nombre+".csv", content.getBytes());
+	}
+	
 }
