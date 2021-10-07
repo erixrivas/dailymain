@@ -13,13 +13,6 @@ public class CustomDownLoadButton extends Div {
 	private Anchor download=new Anchor();
 	
 	
-//	public FirCustomDownLoadButton() {
-//		super();
-//		//button.setText(NombreBoton);
-//	   add(button,download);
-//		// TODO Auto-generated constructor stub
-//	}
-
 	
 	
 	public CustomDownLoadButton(String NombreBoton) {
@@ -30,18 +23,6 @@ public class CustomDownLoadButton extends Div {
 		// TODO Auto-generated constructor stub
 	}
 
-//	public FirCustomDownLoadButton(String fileName, byte[] bytes) {
-//		super();
-//		
-//		if(fileName!=null&&bytes!=null) {
-//			
-//		    
-//	        //download.add(new Button(new Icon(VaadinIcon.DOWNLOAD_ALT)));
-//			setAnchor(fileName, bytes);
-//		}
-//		// TODO Auto-generated constructor stub
-//		add(download);
-//	}
 
 	private void createAnchor(String fileName, byte[] bytes) {
 		download = new Anchor(new StreamResource(fileName, () -> new ByteArrayInputStream(bytes)),"");
