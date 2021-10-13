@@ -1,6 +1,7 @@
 package com.erixrivas.dailymain.example.data.generator;
 
 import com.vaadin.flow.spring.annotation.SpringComponent;
+import com.erixrivas.dailymain.domain.service.MarcaService;
 import com.erixrivas.dailymain.example.data.entity.SamplePerson;
 import com.erixrivas.dailymain.example.data.service.SamplePersonRepository;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import com.vaadin.exampledata.DataType;
@@ -16,6 +18,9 @@ import com.vaadin.exampledata.ExampleDataGenerator;
 @SpringComponent
 public class DataGenerator {
 
+	@Autowired 
+	private MarcaService marcaService;  
+	
     @Bean
     public CommandLineRunner loadData(SamplePersonRepository samplePersonRepository) {
         return args -> {
@@ -44,5 +49,12 @@ public class DataGenerator {
             logger.info("Generated demo data");
         };
     }
+@Bean
+	public MarcaService getMarcaService() {
+		return marcaService;
+	}
+    
+    
+    
 
 }

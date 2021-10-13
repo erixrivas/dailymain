@@ -1,6 +1,13 @@
 package com.erixrivas.dailymain.domain.entyties;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Marca {
+	@Id
+	@GeneratedValue
 	private Integer id;
 	private String descripcion;
 	private String alias;
